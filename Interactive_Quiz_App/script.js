@@ -128,5 +128,5 @@ const selectedLabel = selectedOption.closest('label');
     const mainContainer = document.getElementById("main_container");
     const quizContentContainer = document.getElementById("quiz_content");
     
-    
+    git branch -d master
     
