@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_add-recipe.css">
+    <title>Recipe App - Add Recipe</title>
+</head>
+<body>
+    
+    <section id="add-recipe-section">
+        <h2>Add a New Recipe</h2>
+        <div style="display: flex; justify-content: center;">
+        <form id="add-recipe-form">
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipeName" required>
+
+            <label for="recipe-details">Recipe Details:</label>
+            <textarea id="recipe-details" name="recipeDetails" rows="8" required></textarea>
+
+            <button type="submit">Add Recipe</button>
+        </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Recipe App</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
