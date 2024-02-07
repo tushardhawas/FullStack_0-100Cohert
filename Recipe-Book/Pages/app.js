@@ -19,7 +19,7 @@ const app = express();
 
 app.use(cors()); 
 // Serve static files from the 'public' directory
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 // Enable JSON parsing middleware
 app.use(express.json());
@@ -30,14 +30,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Handle POST request to save a new recipe
 app.post("/save", async (req, res) => {
     const { recipeName, recipeDetails } = req.body;
-    console.log(recipeName);
-    console.log(recipeDetails);
+    // console.log(recipeName);
+    // console.log(recipeDetails);
     const newRecipe = new recipe_data({
         Recipe_name: recipeName,
         Recipe_data: recipeDetails
     });
     const savedRecipe = await newRecipe.save();
-    res.status(201).json(savedRecipe);
+    res.status(201);
+    // res.write('<script>alert("Recipe saved successfully.");</script>');
+    // res.end();
 });
 
 // Handle GET request to fetch all recipes from the database

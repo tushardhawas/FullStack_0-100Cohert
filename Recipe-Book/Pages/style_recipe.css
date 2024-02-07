@@ -1,6 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
 /* Styles for each recipe card */
 .recipe-card {
-    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -26,17 +31,27 @@
 }
 
 /* Styles for header and footer */
-header, footer {
+header {
     background-color: #E3E1D9;
-    color: #333;
-    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
     text-align: center;
+    /* Optionally add a gradient over the background image */
+    background-blend-mode: multiply;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(49, 45, 45);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 nav {
     background-color: #C7C8CC;
-    padding: 10px;
-    text-align: center;
+    padding: 20px;
 }
 
 nav ul {
@@ -52,9 +67,20 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: rgb(25, 21, 21);
 }
 
 nav a:hover {
     text-decoration: underline;
+}
+
+footer {
+    background-color: #C7C8CC;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+footer p {
+    margin: 0;
 }
