@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors'); 
+const jwt = require('jsonwebtoken')
 // Connect to MongoDB Atlas database
 mongoose.connect("mongodb+srv://kirtsugue:REKxnjunOknu1N8D@cluster0.pzy0u14.mongodb.net/Recipes");
 
@@ -13,7 +14,8 @@ const recipeSchema = mongoose.Schema({
 
 // Create a model based on the schema
 const recipe_data = mongoose.model("recipe_data", recipeSchema);
-
+const token = jwt.sign(recipe_data,"secret");
+console.log(token);
 // Initialize Express app
 const app = express();
 
